@@ -5,16 +5,10 @@ public class Board {
     final int col = 3;
     char[][] board_cells = new char[row][col];
 
-    public Board(String state) {
-        int c = 0;
+    public Board() {
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
-                if (state.charAt(c) == '_') {
                     board_cells[i][j] = ' ';
-                } else {
-                    board_cells[i][j] = state.charAt(c);
-                }
-                c++;
             }
         }
     }
