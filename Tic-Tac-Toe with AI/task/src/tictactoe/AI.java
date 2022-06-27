@@ -6,7 +6,6 @@ import java.util.Random;
 public class AI {
     int row;
     int col;
-    Board board;
 
     public String easyMove() {
         Random rand = new Random();
@@ -15,8 +14,7 @@ public class AI {
         return row + " " + col;
     }
 
-    public void aiInput(String mode, Board board) {
-        setBoard(board);
+    public void input(String mode, Board board, char mark) {
         int[] coordinates;
         char[][] board_cells = board.getBoard_cells();
 
@@ -36,16 +34,9 @@ public class AI {
                 }
 
                 System.out.println("Making move level \"easy\"");
-                board.updateCell(row_index, col_index, 'O');
+                board.updateCell(row_index, col_index, mark);
             }
         }
     }
 
-    public Board getBoard() {
-        return board;
-    }
-
-    public void setBoard(Board board) {
-        this.board = board;
-    }
 }
