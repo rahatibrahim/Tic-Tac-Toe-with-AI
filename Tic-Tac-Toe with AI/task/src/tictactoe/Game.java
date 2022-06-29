@@ -10,6 +10,7 @@ public class Game {
 
         while (true) {
             if (player1.equals("user")) {
+                // user makes a move
                 if (user.input(board, 'X')) {
                     board.displayBoard();
                 } else {
@@ -17,13 +18,14 @@ public class Game {
                 }
             } else {
                 // ai makes a move
-                ai.input("easy", board, 'X');
+                ai.input(player1, board, 'X');
                 board.displayBoard();
             }
 
             if (!board.result().equals("Game not finished")) break;
 
             if (player2.equals("user")) {
+                // user makes a move
                 if (user.input(board, 'O')) {
                     board.displayBoard();
                 } else {
@@ -31,7 +33,7 @@ public class Game {
                 }
             } else {
                 // ai makes a move
-                ai.input("easy", board, 'O');
+                ai.input(player2, board, 'O');
                 board.displayBoard();
             }
 

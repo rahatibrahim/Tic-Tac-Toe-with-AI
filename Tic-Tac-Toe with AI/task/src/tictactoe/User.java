@@ -45,5 +45,4 @@ public class User {
         board.updateCell(row_index, col_index, mark);
         return true;
     }
-
 }
