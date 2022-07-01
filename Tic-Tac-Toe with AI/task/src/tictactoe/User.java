@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class User {
 
-    public boolean input(Board board, char mark) {
+    public boolean input(Board board, char turn) {
         System.out.print("Enter the coordinates: > ");
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
@@ -42,7 +42,7 @@ public class User {
             return false;
         }
 
-        board.updateCell(row_index, col_index, mark);
+        board.updateCell(row_index, col_index, turn);
         return true;
     }
 }

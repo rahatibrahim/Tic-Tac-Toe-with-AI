@@ -11,11 +11,11 @@ public class Game {
         while (true) {
             if (player1.equals("user")) {
                 // user makes a move
-                if (user.input(board, 'X')) {
-                    board.displayBoard();
-                } else {
-                    continue;
+                boolean flag = false;
+                while (!flag) {
+                    flag = user.input(board, 'X');
                 }
+                board.displayBoard();
             } else {
                 // ai makes a move
                 ai.input(player1, board, 'X');
@@ -26,11 +26,11 @@ public class Game {
 
             if (player2.equals("user")) {
                 // user makes a move
-                if (user.input(board, 'O')) {
-                    board.displayBoard();
-                } else {
-                    continue;
+                boolean flag = false;
+                while (!flag) {
+                    flag = user.input(board, 'O');
                 }
+                board.displayBoard();
             } else {
                 // ai makes a move
                 ai.input(player2, board, 'O');
